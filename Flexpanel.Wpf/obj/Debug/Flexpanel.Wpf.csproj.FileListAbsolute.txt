@@ -1,0 +1,5 @@
+D:\Documents\GitHub\Flexpanel\Flexpanel.Wpf\bin\Debug\Flexpanel.Wpf.dll
+D:\Documents\GitHub\Flexpanel\Flexpanel.Wpf\bin\Debug\Flexpanel.Wpf.pdb
+D:\Documents\GitHub\Flexpanel\Flexpanel.Wpf\obj\Debug\Flexpanel.Wpf.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\Flexpanel\Flexpanel.Wpf\obj\Debug\Flexpanel.Wpf.dll
+D:\Documents\GitHub\Flexpanel\Flexpanel.Wpf\obj\Debug\Flexpanel.Wpf.pdb

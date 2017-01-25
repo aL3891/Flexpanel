@@ -1,0 +1,17 @@
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\bin\Debug\Flexpanel.Uwp.pdb
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\bin\Debug\Flexpanel.Uwp.pri
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\Flexpanel.Uwp.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\Flexpanel.Uwp.pdb
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\priconfig.xml
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\priconfig.xml.intermediate
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\layout.resfiles
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\layout.resfiles.intermediate
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\resources.resfiles
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\resources.resfiles.intermediate
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\pri.resfiles
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\pri.resfiles.intermediate
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\qualifiers.txt
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\qualifiers.txt.intermediate
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\bin\Debug\Flexpanel.Uwp.dll
+D:\Documents\GitHub\Flexpanel\Flexpanel.Uwp\obj\Debug\Flexpanel.Uwp.dll
