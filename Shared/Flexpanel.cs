@@ -20,7 +20,7 @@ using System.Windows.Controls;
 
 
 
-namespace WeightTracker
+namespace FlexPanelLayout
 {
     public class Flexpanel : Panel
     {
@@ -28,13 +28,7 @@ namespace WeightTracker
         public static readonly DependencyProperty GrowProperty = DependencyProperty.RegisterAttached("Grow", typeof(int), typeof(Flexpanel), new PropertyMetadata(1, new PropertyChangedCallback((d, e) => { ((UIElement)d).InvalidateMeasure(); })));
         public static readonly DependencyProperty ShrinkProperty = DependencyProperty.RegisterAttached("Shrink", typeof(int), typeof(Flexpanel), new PropertyMetadata(1, new PropertyChangedCallback((d, e) => { ((UIElement)d).InvalidateMeasure(); })));
         public static readonly DependencyProperty AlignSelfProperty = DependencyProperty.RegisterAttached("AlignSelf", typeof(FlexAlignItems), typeof(Flexpanel), new PropertyMetadata(FlexAlignItems.NotSet, new PropertyChangedCallback((d, e) => { ((UIElement)d).InvalidateMeasure(); })));
-
-
-
-
-
         public static readonly DependencyProperty BasisProperty = DependencyProperty.RegisterAttached("Basis", typeof(double), typeof(Flexpanel), new PropertyMetadata(1d));
-
         public static readonly DependencyProperty DirectionProperty = DependencyProperty.Register("Direction", typeof(FlexDirection), typeof(Flexpanel), new PropertyMetadata(FlexDirection.Row, new PropertyChangedCallback((d, e) => { ((Flexpanel)d).UpdateDirection((FlexDirection)e.NewValue); ((UIElement)d).InvalidateMeasure(); })));
         public static readonly DependencyProperty WrapProperty = DependencyProperty.Register("Wrap", typeof(FlexWrap), typeof(Flexpanel), new PropertyMetadata(FlexWrap.NoWrap, new PropertyChangedCallback((d, e) => { ((UIElement)d).InvalidateMeasure(); })));
         public static readonly DependencyProperty JustifyContentProperty = DependencyProperty.Register("JustifyContent", typeof(FlexJustifyContent), typeof(Flexpanel), new PropertyMetadata(FlexJustifyContent.Center, new PropertyChangedCallback((d, e) => { ((UIElement)d).InvalidateMeasure(); })));
@@ -98,8 +92,6 @@ namespace WeightTracker
                 isReverse = true;
             else
                 isReverse = false;
-
-
         }
 
         protected override Size MeasureOverride(Size availableSize)
@@ -110,7 +102,10 @@ namespace WeightTracker
                 c.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
             }
 
-            CalculateMargins(availableSize);
+            if (Children.Count > 0)
+                totalContentSize = NewSize(Children.Cast<UIElement>().Sum(c => GetPrimaryAxsis(c.DesiredSize)), Children.Cast<UIElement>().Max(c => GetSecondaryAxsis(c.DesiredSize)));
+            else
+                totalContentSize = new Size();
             //todo fix inifinite totalcontent size
 
             return NewSize(
@@ -138,11 +133,9 @@ namespace WeightTracker
                         availableSpace -= e.AddSpace(availableSpace * e.basis);
             }
 
-            totalContentSize = NewSize(es.Sum(c => c.current), GetSecondaryAxsis(availableSize));
 
             startMargin = 0;
             midMargin = 0;
-            endMargin = 0;
 
             if ((JustifyContent == FlexJustifyContent.End && !isReverse) || (JustifyContent == FlexJustifyContent.Start && isReverse))
                 startMargin = availableSpace;
@@ -159,6 +152,9 @@ namespace WeightTracker
 
         protected override Size ArrangeOverride(Size finalSize)
         {
+
+            CalculateMargins(finalSize);
+
             if (Children.Count == 0)
                 return finalSize;
 

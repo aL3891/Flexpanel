@@ -12,3 +12,5 @@ D:\Documents\GitHub\Flexpanel\Sample.Wpf\obj\Debug\Sample.Wpf.Properties.Resourc
 D:\Documents\GitHub\Flexpanel\Sample.Wpf\obj\Debug\Sample.Wpf.csproj.GenerateResource.Cache
 D:\Documents\GitHub\Flexpanel\Sample.Wpf\obj\Debug\Sample.Wpf.exe
 D:\Documents\GitHub\Flexpanel\Sample.Wpf\obj\Debug\Sample.Wpf.pdb
+D:\Documents\GitHub\Flexpanel\Sample.Wpf\bin\Debug\Flexpanel.Wpf.dll
+D:\Documents\GitHub\Flexpanel\Sample.Wpf\bin\Debug\Flexpanel.Wpf.pdb

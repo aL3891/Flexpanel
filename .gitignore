@@ -216,3 +216,9 @@ BundleArtifacts
 AppPackages
 /packages
 /.vs
+Flexpanel.Uwp/bin/Debug/Flexpanel.Uwp.dll
+[Bb]in/
+/**/[Oo]bj/
+*.dll
+*.pdb
+*.lock.json

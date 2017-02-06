@@ -93,5 +93,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Flexpanel.Wpf\Flexpanel.Wpf.csproj">
+      <Project>{8f03cc80-7295-4c16-a3f4-2c01cd279e64}</Project>
+      <Name>Flexpanel.Wpf</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

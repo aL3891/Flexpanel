@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="Sample.Uwp.WeatherApp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sample.Uwp"
+    xmlns:f="using:FlexPanelLayout"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <CommandBar>
+            <CommandBar.Content>
+                <AppBarButton>
+                    <AppBarButton.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar.Content>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="Refresh" Label="fff"></AppBarButton>
+                <AppBarButton Icon="Favorite" Label="fff"></AppBarButton>
+                <AppBarButton Icon="Pin" Label="fff"></AppBarButton>
+            </CommandBar.PrimaryCommands>
+
+        </CommandBar>
+        <SplitView IsPaneOpen="True" >
+            <SplitView.Pane>
+                <f:Flexpanel Direction="Column">
+                    
+                    
+                </f:Flexpanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <f:Flexpanel>
+                    <Button>apa5</Button>
+                </f:Flexpanel>
+            </SplitView.Content>
+        </SplitView>
+
+    </StackPanel>
+</Page>
