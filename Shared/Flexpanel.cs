@@ -48,6 +48,7 @@ namespace FlexPanelLayout
         private List<ExtendedChild> es;
         private bool IsRow;
         private bool isReverse;
+        private double totalBasis;
 
         public Flexpanel()
         {
@@ -103,11 +104,14 @@ namespace FlexPanelLayout
             }
 
             if (Children.Count > 0)
+            {
                 totalContentSize = NewSize(Children.Cast<UIElement>().Sum(c => GetPrimaryAxsis(c.DesiredSize)), Children.Cast<UIElement>().Max(c => GetSecondaryAxsis(c.DesiredSize)));
+                totalBasis = Children.Cast<UIElement>().Sum(c => GetBasis(c));
+                es = Children.Cast<UIElement>().Select(c => new ExtendedChild(c, GetPrimaryAxsis(c.DesiredSize), totalBasis, primaryaxsis, primaryaxsismax, primaryaxsisMin)).ToList();
+            }
             else
                 totalContentSize = new Size();
-            //todo fix inifinite totalcontent size
-
+            
             return NewSize(
                 GetPrimaryAxsis(availableSize) == double.PositiveInfinity ? GetPrimaryAxsis(totalContentSize) : GetPrimaryAxsis(availableSize),
                 GetSecondaryAxsis(availableSize) == double.PositiveInfinity ? GetSecondaryAxsis(totalContentSize) : GetSecondaryAxsis(availableSize));
@@ -116,10 +120,7 @@ namespace FlexPanelLayout
         private void CalculateMargins(Size availableSize)
         {
             var availableSpace = GetPrimaryAxsis(availableSize);
-            var totalBasis = Children.Cast<UIElement>().Sum(c => GetBasis(c));
-
-            es = Children.Cast<UIElement>().Select(c => new ExtendedChild(c, GetPrimaryAxsis(c.DesiredSize), totalBasis, primaryaxsis, primaryaxsismax, primaryaxsisMin)).ToList();
-
+            
             while (availableSpace > 0)
             {
                 var canAcceptSpace = es.Where(cc => cc.CanUseMoreSpace()).ToList();
@@ -132,8 +133,7 @@ namespace FlexPanelLayout
                     foreach (var e in canAcceptSpace)
                         availableSpace -= e.AddSpace(availableSpace * e.basis);
             }
-
-
+            
             startMargin = 0;
             midMargin = 0;
 
