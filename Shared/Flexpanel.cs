@@ -41,7 +41,7 @@ namespace FlexPanelLayout
         Func<double, double, Size> NewSize;
         Func<double, double, Point> NewPoint;
 
-        double startMargin, midMargin, endMargin;
+        double startMargin, midMargin;
         Size totalContentSize;
 
         DependencyProperty primaryaxsisMin, primaryaxsismax, primaryaxsis;
