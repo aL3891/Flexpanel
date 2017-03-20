@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sample.Wpf"
+        xmlns:f="clr-namespace:FlexPanelLayout;assembly=Flexpanel.Wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+
+    <f:Flexpanel JustifyContent="SpaceBetween" Direction="Column">
+        <Rectangle HorizontalAlignment="Center" Width="10" Height="10" Fill="Green"></Rectangle>
+        <Rectangle Width="10" Height="10" Fill="Green"></Rectangle>
+        <Rectangle Width="10" Height="10" Fill="Green"></Rectangle>
+        <Rectangle Width="10" Height="10" Fill="Green"></Rectangle>
+    </f:Flexpanel>
 </Window>

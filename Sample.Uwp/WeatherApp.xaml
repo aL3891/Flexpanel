@@ -22,21 +22,79 @@
                 <AppBarButton Icon="Favorite" Label="fff"></AppBarButton>
                 <AppBarButton Icon="Pin" Label="fff"></AppBarButton>
             </CommandBar.PrimaryCommands>
-
         </CommandBar>
-        <SplitView IsPaneOpen="True" >
+        <SplitView IsPaneOpen="True">
             <SplitView.Pane>
-                <f:Flexpanel Direction="Column">
-                    
-                    
+                <f:Flexpanel Background="Green" Direction="Column">
+                    <Button>Forecast</Button>
+                    <Button>Maps</Button>
+                    <Button>Historical weather</Button>
+                    <Button>Favorites</Button>
+                    <Button>Send feedback</Button>
                 </f:Flexpanel>
             </SplitView.Pane>
             <SplitView.Content>
-                <f:Flexpanel>
-                    <Button>apa5</Button>
+                <f:Flexpanel Direction="Column">
+                    <TextBlock>Hägersten, stockholm</TextBlock>
+                    <f:Flexpanel>
+                        <TextBlock>5</TextBlock>
+                        <TextBlock>c</TextBlock>
+                    </f:Flexpanel>
+                    <TextBlock>Updated as of 4:45pm</TextBlock>
+                    <f:Flexpanel>
+                        <TextBlock>Feels like 5c</TextBlock>
+                        <TextBlock>Wind 4 km/h</TextBlock>
+                        <TextBlock>Visibility 10km</TextBlock>
+                    </f:Flexpanel>
+                    <f:Flexpanel>
+                        <TextBlock>Barometer 1000mb</TextBlock>
+                        <TextBlock>Humidity 30%</TextBlock>
+                        <TextBlock>dewpoint -10</TextBlock>
+                    </f:Flexpanel>
+                    <TextBlock>Daily</TextBlock>
+                    <f:Flexpanel>
+                        <TextBlock>Hourly</TextBlock>
+                        <f:Flexpanel>
+                            <Button>Summary</Button>
+                            <Button>Details</Button>
+                        </f:Flexpanel>
+                    </f:Flexpanel>
+                    <Rectangle Fill="Blue"></Rectangle>
+                    <TextBlock>Day details</TextBlock>
+                    <f:Flexpanel>
+                        <f:Flexpanel>
+                            <TextBlock>Day details</TextBlock>
+                            <TextBlock>Expect sunny skies. Temperatures near freezing</TextBlock>
+                            <TextBlock>Night</TextBlock>
+                            <TextBlock>The skies will be partly cloudy. THe low will be -1 Temperatures below freezing</TextBlock>
+                        </f:Flexpanel>
+                        <f:Flexpanel>
+                            <TextBlock>Sunrise</TextBlock>
+                            <TextBlock>5:54 am</TextBlock>
+                            <TextBlock>Sunset</TextBlock>
+                            <TextBlock>5:59 pm</TextBlock>
+                        </f:Flexpanel>
+                        <f:Flexpanel>
+                            <TextBlock>Moonrise</TextBlock>
+                            <TextBlock>5:54 am</TextBlock>
+                            <TextBlock>Moonset</TextBlock>
+                            <TextBlock>5:59 pm</TextBlock>
+                            <TextBlock>Moonphase</TextBlock>
+                        </f:Flexpanel>
+                        <f:Flexpanel>
+                            <TextBlock>Precipitation</TextBlock>
+                            <Rectangle></Rectangle>
+                            <TextBlock>Humidity</TextBlock>
+                            <Rectangle></Rectangle>
+                            <TextBlock>Uv Index</TextBlock>
+                            <Rectangle></Rectangle>
+                            <TextBlock>Max Wind</TextBlock>
+                            <Rectangle></Rectangle>
+                        </f:Flexpanel>
+                    </f:Flexpanel>
+
                 </f:Flexpanel>
             </SplitView.Content>
         </SplitView>
-
     </StackPanel>
 </Page>
