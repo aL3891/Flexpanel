@@ -4,9 +4,79 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sample.Wpf"
+		xmlns:f="clr-namespace:FlexPanelLayout;assembly=Flexpanel.Wpf"
         mc:Ignorable="d"
-        Title="WeatherApp" Height="300" Width="300">
-    <Grid>
-        
-    </Grid>
+        Title="WeatherApp" Height="600" Width="800">
+	<f:Flexpanel Direction="Column" JustifyContent="Start" AlignItems="Stretch">
+		<f:Flexpanel.Resources>
+			<Style TargetType="{x:Type TextBlock}">
+				<Setter Property="TextAlignment" Value="Center" />
+			</Style>
+		</f:Flexpanel.Resources>
+		<TextBlock>Hägersten, stockholm</TextBlock>
+		<f:Flexpanel>
+			<TextBlock>5</TextBlock>
+			<TextBlock>c</TextBlock>
+		</f:Flexpanel>
+		<f:Flexpanel>
+			<TextBlock>Updated as of 4:45pm</TextBlock>
+		</f:Flexpanel>
+		<f:Flexpanel >
+			<TextBlock>Feels like 5c</TextBlock>
+			<TextBlock>Wind 4 km/h</TextBlock>
+			<TextBlock>Visibility 10km</TextBlock>
+		</f:Flexpanel>
+		<f:Flexpanel>
+			<TextBlock>Barometer 1000mb</TextBlock>
+			<TextBlock>Humidity 30%</TextBlock>
+			<TextBlock>dewpoint -10</TextBlock>
+		</f:Flexpanel>
+		<TextBlock>Daily</TextBlock>
+		<f:Flexpanel JustifyContent="SpaceBetween">
+			<TextBlock>Hourly</TextBlock>
+			<f:Flexpanel>
+				<Button>Summary</Button>
+				<Button>Details</Button>
+			</f:Flexpanel>
+		</f:Flexpanel>
+		<TextBlock>Day details</TextBlock>
+		<f:Flexpanel Height="100" Direction="Row" AlignItems="Stretch">
+			<f:Flexpanel.Resources>
+				<Style TargetType="{x:Type f:Flexpanel}">
+					<Setter Property="JustifyContent" Value="SpaceBetween" />
+					<Setter Property="AlignItems" Value="Center" />
+					<Setter Property="Direction" Value="Column" />
+				</Style>
+			</f:Flexpanel.Resources>
+			<f:Flexpanel Direction="Column"  AlignItems="Center">
+				<TextBlock>Day details</TextBlock>
+				<TextBlock>Expect sunny skies. Temperatures near freezing</TextBlock>
+				<TextBlock>Night</TextBlock>
+				<TextBlock>The skies will be partly cloudy.</TextBlock>
+			</f:Flexpanel>
+			<f:Flexpanel Direction="Column">
+				<TextBlock>Sunrise</TextBlock>
+				<TextBlock>5:54 am</TextBlock>
+				<TextBlock>Sunset</TextBlock>
+				<TextBlock>5:59 pm</TextBlock>
+			</f:Flexpanel>
+			<f:Flexpanel Direction="Column">
+				<TextBlock>Moonrise</TextBlock>
+				<TextBlock>5:54 am</TextBlock>
+				<TextBlock>Moonset</TextBlock>
+				<TextBlock>5:59 pm</TextBlock>
+				<TextBlock>Moonphase</TextBlock>
+			</f:Flexpanel>
+			<f:Flexpanel Direction="Column">
+				<TextBlock>Precipitation</TextBlock>
+				<Rectangle></Rectangle>
+				<TextBlock>Humidity</TextBlock>
+				<Rectangle></Rectangle>
+				<TextBlock>Uv Index</TextBlock>
+				<Rectangle></Rectangle>
+				<TextBlock>Max Wind</TextBlock>
+				<Rectangle></Rectangle>
+			</f:Flexpanel>
+		</f:Flexpanel>
+	</f:Flexpanel>
 </Window>

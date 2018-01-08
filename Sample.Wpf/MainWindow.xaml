@@ -8,10 +8,48 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
 
-    <f:Flexpanel JustifyContent="SpaceBetween" Direction="Column">
-        <Rectangle HorizontalAlignment="Center" Width="10" Height="10" Fill="Green"></Rectangle>
-        <Rectangle Width="10" Height="10" Fill="Green"></Rectangle>
-        <Rectangle Width="10" Height="10" Fill="Green"></Rectangle>
-        <Rectangle Width="10" Height="10" Fill="Green"></Rectangle>
-    </f:Flexpanel>
+	<f:Flexpanel Direction="Column" AlignItems="Stretch">
+		<f:Flexpanel JustifyContent="SpaceBetween" Height="100" AlignItems="Stretch">
+			<f:Flexpanel Direction="Column" JustifyContent="SpaceBetween" AlignItems="Center">
+				<TextBlock>Day details</TextBlock>
+				<TextBlock>Expect sunny skies. Temperatures near freezing</TextBlock>
+				<TextBlock>Night</TextBlock>
+				<TextBlock>The skies will be partly cloudy.</TextBlock>
+			</f:Flexpanel>
+			<f:Flexpanel Direction="Column">
+				<TextBlock>Sunrise</TextBlock>
+				<TextBlock>5:54 am</TextBlock>
+				<TextBlock>Sunset</TextBlock>
+				<TextBlock>5:59 pm</TextBlock>
+			</f:Flexpanel>
+			<f:Flexpanel Direction="Column">
+				<TextBlock>Moonrise</TextBlock>
+				<TextBlock>5:54 am</TextBlock>
+				<TextBlock>Moonset</TextBlock>
+				<TextBlock>5:59 pm</TextBlock>
+				<TextBlock>Moonphase</TextBlock>
+			</f:Flexpanel>
+			<f:Flexpanel Direction="Column">
+				<TextBlock>Precipitation</TextBlock>
+				<Rectangle></Rectangle>
+				<TextBlock>Humidity</TextBlock>
+				<Rectangle></Rectangle>
+				<TextBlock>Uv Index</TextBlock>
+				<Rectangle></Rectangle>
+				<TextBlock>Max Wind</TextBlock>
+				<Rectangle></Rectangle>
+			</f:Flexpanel>
+		</f:Flexpanel>
+
+		<!--<f:Flexpanel>
+			<TextBlock>5</TextBlock>
+			<TextBlock>c</TextBlock>
+		</f:Flexpanel>-->
+		<!--<f:Flexpanel Background="Beige">
+			<Rectangle Width="10" Height="10" Fill="Green"></Rectangle>
+			<Rectangle Width="10" Height="10" Fill="Green"></Rectangle>
+		</f:Flexpanel>
+		<Rectangle Width="10" Height="10" Fill="Green"></Rectangle>
+		<Rectangle Width="10" Height="10" Fill="Green"></Rectangle>-->
+	</f:Flexpanel>
 </Window>

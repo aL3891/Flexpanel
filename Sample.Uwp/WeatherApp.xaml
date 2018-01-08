@@ -23,8 +23,8 @@
                 <AppBarButton Icon="Pin" Label="fff"></AppBarButton>
             </CommandBar.PrimaryCommands>
         </CommandBar>
-        <SplitView IsPaneOpen="True">
-            <SplitView.Pane>
+        <SplitView IsPaneOpen="False">
+            <!--<SplitView.Pane>
                 <f:Flexpanel Background="Green" Direction="Column">
                     <Button>Forecast</Button>
                     <Button>Maps</Button>
@@ -32,7 +32,7 @@
                     <Button>Favorites</Button>
                     <Button>Send feedback</Button>
                 </f:Flexpanel>
-            </SplitView.Pane>
+            </SplitView.Pane>-->
             <SplitView.Content>
                 <f:Flexpanel Direction="Column">
                     <TextBlock>Hägersten, stockholm</TextBlock>
@@ -92,7 +92,6 @@
                             <Rectangle></Rectangle>
                         </f:Flexpanel>
                     </f:Flexpanel>
-
                 </f:Flexpanel>
             </SplitView.Content>
         </SplitView>
