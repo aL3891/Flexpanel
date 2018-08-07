@@ -222,3 +222,4 @@ Flexpanel.Uwp/bin/Debug/Flexpanel.Uwp.dll
 *.dll
 *.pdb
 *.lock.json
+*.metaproj

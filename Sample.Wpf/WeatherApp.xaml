@@ -6,11 +6,13 @@
         xmlns:local="clr-namespace:Sample.Wpf"
 		xmlns:f="clr-namespace:FlexPanelLayout;assembly=Flexpanel.Wpf"
         mc:Ignorable="d"
-        Title="WeatherApp" Height="600" Width="800">
+        Title="WeatherApp" Height="720" Width="1024">
 	<f:Flexpanel Direction="Column" JustifyContent="Start" AlignItems="Stretch">
 		<f:Flexpanel.Resources>
 			<Style TargetType="{x:Type TextBlock}">
 				<Setter Property="TextAlignment" Value="Center" />
+				<Setter Property="Padding" Value="10" />
+				<Setter Property="FontSize" Value="20" />
 			</Style>
 		</f:Flexpanel.Resources>
 		<TextBlock>Hägersten, stockholm</TextBlock>
@@ -31,7 +33,7 @@
 			<TextBlock>Humidity 30%</TextBlock>
 			<TextBlock>dewpoint -10</TextBlock>
 		</f:Flexpanel>
-		<TextBlock>Daily</TextBlock>
+		<TextBlock TextAlignment="Left">Daily</TextBlock>
 		<f:Flexpanel JustifyContent="SpaceBetween">
 			<TextBlock>Hourly</TextBlock>
 			<f:Flexpanel>
@@ -40,7 +42,7 @@
 			</f:Flexpanel>
 		</f:Flexpanel>
 		<TextBlock>Day details</TextBlock>
-		<f:Flexpanel Height="100" Direction="Row" AlignItems="Stretch">
+		<f:Flexpanel Height="200" Direction="Row" AlignItems="Stretch">
 			<f:Flexpanel.Resources>
 				<Style TargetType="{x:Type f:Flexpanel}">
 					<Setter Property="JustifyContent" Value="SpaceBetween" />
